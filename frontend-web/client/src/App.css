@@ -1,0 +1,240 @@
+/* frontend-web/client/src/App.css */
+
+/* --- Global Setup --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .container {
+    /* Two-column layout on larger screens */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Header --- */
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* --- Cards --- */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* --- Uploader --- */
+input[type="file"] {
+  display: block;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cce0ff;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d93025;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* --- History List --- */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.history-item:hover {
+  background-color: #f1f1f1;
+}
+
+.history-item.active {
+  background-color: #e6f7ff;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.history-item span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --- Visualization --- */
+.visualization h3 {
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+.summary-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .summary-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.summary-box {
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.chart-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.averages-table {
+  width: 100%;
+}
+
+.averages-table td {
+  padding: 8px 0;
+}
+.averages-table td:last-child {
+  text-align: right;
+  font-weight: bold;
+}
+.auth-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 25px 0;
+}
+
+
+/* frontend-web/client/src/App.css */
+
+/* ... (all your existing styles) ... */
+
+/* --- History Item Layout --- */
+.history-item {
+  /* This now uses flexbox */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* (Remove justify-content/align-items from .history-item if you had it) */
+}
+
+.history-item-info {
+  /* This part is now the main clickable area */
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.history-item.active .history-item-info {
+  /* Move the active style to the info box */
+  background-color: #e6f7ff;
+}
+
+/* --- New Download Button Style --- */
+.download-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  margin-right: 10px; /* Give it some space */
+  border: none;
+  border-radius: 4px;
+}
+
+.download-btn:hover {
+  background-color: #218838;
+}
