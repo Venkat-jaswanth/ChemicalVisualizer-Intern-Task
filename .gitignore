@@ -1,0 +1,27 @@
+# .gitignore
+
+# --- General Python ---
+__pycache__/
+*.pyc
+*.log
+venv/
+
+# --- Django Backend (backend/) ---
+db.sqlite3
+uploads/
+
+# --- React Frontend (frontend-web/) ---
+frontend-web/client/node_modules/
+frontend-web/client/build/
+frontend-web/client/.env
+frontend-web/client/.env.local
+frontend-web/client/.env.development.local
+frontend-web/client/.env.test.local
+frontend-web/client/.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- macOS / Windows ---
+.DS_Store
+Thumbs.db
